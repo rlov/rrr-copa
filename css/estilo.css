@@ -1,0 +1,711 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(231, 236, 252);
+    font-family: 'Quicksand', sans-serif;
+}
+
+nav{
+    background-color: rgba(69, 82, 98, 0.815);
+    display: flex;
+    align-items: center;
+    color: white;
+    /*IMPORTANTE*/
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0px;
+    /*IMPORTANTE*/
+    justify-content: space-between;
+}
+/*
+nav .logo{
+    float: left;
+    background-image: url("../imagenes/logo.png");
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px;
+    min-width:70px;
+    height: 70px;
+}*/
+
+nav #logo-celular{
+    display: inline-block;
+        background-color: orangered;
+        height: 70px;
+        margin-right: -20px;
+        padding: 10px;
+        text-align: center;
+        min-width:70px;
+        background-image: url("../imagenes/logo.png");
+        background-color: orangered;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: 0.3s all ease;
+        transform: translateX(-100%);       
+}
+
+nav #logo-menu-nav{
+    cursor: pointer;
+    transition: 0.3s all ease;
+    background-color:orangered;  
+    height: 70px;  
+    padding-top: 10px;
+    width: 50px;
+    text-align: center;
+    display: none;
+}
+
+nav #logo-menu-nav i{
+    font-size: 40px;
+}
+
+nav .nav-parrafo{
+    height: 70px;
+    width: 150px;
+    text-align: center;
+    padding-top: 25px;
+    font-weight: bold;
+    margin-left: 60px;
+}
+
+nav .contenedor-busqueda{
+    position: relative;
+    display: flex;
+    height: 70px;
+    width: 500px;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(86, 97, 110);
+}
+
+nav .contenedor-busqueda input{
+    padding-left: 20px;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    color: #a8aaa6;
+    width: 90%;
+}
+
+nav .contenedor-busqueda .boton-busqueda{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    padding-right: 5px;
+    width: 10%;
+    text-align: center;
+    padding-top: 25px;
+    color: #a8aaa6;
+    font-size: 20px;
+}
+
+nav .contenedor-busqueda + p{
+    color: white;
+    font-size: 0.7em;
+    padding: 10px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+nav .contenedor-nav-notificaciones{
+    height: 70px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .contenedor-nav-notificaciones .nav-notificaciones-emoji{
+    cursor: pointer;
+    width: calc(100%/3);
+    height: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+nav .contenedor-nav-fotoPerfil{
+    cursor: pointer;
+    width: 200px;
+    height: 70px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+nav .contenedor-nav-fotoPerfil img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav .contenedor-nav-fotoPerfil p{
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+    width: 100px;
+}
+
+nav .contenedor-nav-fotoPerfil span{
+    display: block;
+    font-size: 10px;
+    color: #a8aaa6;
+}
+
+nav .contenedor-nav-fotoPerfil i{
+    margin-left: 20px;
+}
+
+nav .contenedor-busqueda .nav-personas-encontradas{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    display: none;
+}
+
+nav .contenedor-busqueda .nav-personas-encontradas.activo{
+    display: inline-block;
+}
+
+nav .contenedor-busqueda .nav-personas-encontradas ul{
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+    -3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-busqueda .nav-personas-encontradas li{
+    cursor: pointer;
+    width: 100%;
+    list-style: none;   
+    padding: 20px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.contenedor-busqueda .nav-personas-encontradas li:hover{
+   background-color: #f3f3eb;
+}
+
+.contenedor-busqueda .nav-personas-encontradas img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.contenedor-busqueda .nav-personas-encontradas p{
+    width: 70%;
+    height: 100%;
+    padding-top: 5px;
+    color: #7c7c7b;
+    font-weight: bold;
+}
+
+.contenedor-busqueda .nav-personas-encontradas span{
+    display: block;
+    font-size: 12px;
+    color: #a8aaa6;
+    font-weight: normal;
+}
+
+.nav-personas-encontradas i{
+    color: #c3c4c2;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+nav .contenedor-nav-notificaciones .nav-solicitudes,
+nav .contenedor-nav-notificaciones .nav-mensajes,
+nav .contenedor-nav-notificaciones .nav-notificaciones{
+    position: relative;
+}
+
+
+nav .nav-solicitudes .numero-solicitudes,
+nav .nav-mensajes .numero-mensajes,
+nav .nav-notificaciones .numero-notificaciones{
+    position: absolute;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: rgb(78, 203, 212);
+    border: none;
+    color: white;
+    right: 10px;
+    top: 15px;
+}
+
+nav .nav-mensajes .numero-mensajes{
+    background-color: #7a08ec;
+}
+
+nav .nav-notificaciones .numero-notificaciones{
+    background-color: tomato;
+}
+
+
+nav .nav-solicitudes .nav-mostrando-solicitudes{
+    position: absolute;
+    width: 350px;
+
+    top: 60px;
+    right: -100px;
+    padding-top: 0px;
+    border-radius: 8px;
+    display: none;
+    z-index: 1500;
+    transition: 1.2s all ease-in-out;
+}
+/*-------------------------------->
+MOSTRANDO SOLICITUDES
+--------------------------------->*/
+
+nav .nav-solicitudes .nav-mostrando-solicitudes.activo{
+    display: inline-block;
+}
+
+nav .nav-solicitudes .nav-mostrando-solicitudes::before{
+    content: "";
+    display: block;
+    background-color: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    top: -5px;
+    left: 215px;
+}
+
+.nav-mostrando-solicitudes .titulo{
+    font-size: 8px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    color: #a8aaa6;
+    border-bottom: 1px solid #d9dbd7;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.nav-mostrando-solicitudes .titulo span{
+    color: #a8aaa6;
+}
+
+.nav-mostrando-solicitudes .titulo span:hover{
+    color: orangered;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes{
+    width: 100%;
+    background-color: violet;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes ul{
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+    -3px 3px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes  li{
+    cursor: pointer;
+    width: 100%;
+    list-style: none;   
+    padding: 20px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    color: black;
+    font-size: 16px;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes ul li:hover .btn-cerrar{
+    color: skyblue;
+}
+
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li  p{
+    width: 50%;
+    text-align: left;
+    margin-left: 5px;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li  p:hover{
+    color: skyblue;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li span{
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+    color: #a8aaa6;
+    cursor: text;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li .botones{
+    width: 30%;
+    height: 100%;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li .botones button{
+    cursor: pointer;
+    font-size: 30px;
+    background-color: skyblue;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes li .botones button:hover{
+    background-color: rgba(184, 177, 177, 0.4);
+}   
+
+
+.nav-mostrando-solicitudes .mostrar-todas-solicitudes{
+    width: 100%;
+    height: 50px;
+    background-color: #0182fa;
+    color: #d3d4d1;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.nav-mostrando-solicitudes .mostrar-todas-solicitudes:hover{
+    color: black;
+}
+
+
+/*
+-------------------------------------->
+VENTANA DE MENSAJES Y CHATS
+--------------------------------------->
+*/
+
+nav .nav-mensajes .nav-mostrando-mensajes{
+    background-color: royalblue;
+    position: absolute;
+    width: 350px;
+    top: 60px;
+    right: -100px;
+    border-radius: 8px;
+    z-index: 1500;
+    transition: 1.2s all ease-in-out;
+    display: none;
+}
+
+nav .nav-mensajes .nav-mostrando-mensajes.activo{
+    display: inline-block;
+}
+
+nav .nav-mensajes .nav-mostrando-mensajes::before{
+    content: "";
+    display: block;
+    background-color: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    top: -5px;
+    left: 215px;
+}
+
+.nav-mensajes .nav-mostrando-mensajes .titulo{
+    font-size: 8px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    color: #a8aaa6;
+    border-bottom: 1px solid #d9dbd7;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.nav-mostrando-mensajes .titulo span{
+    color: #a8aaa6;
+}
+
+.nav-mostrando-mensajes .titulo span:hover{
+    color: #7a08ec;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes{
+    width: 100%;
+    background-color: violet;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes ul{
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+    -3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-mostrando-mensajes .contenedor-mensajes ul li{
+    width: 100%;
+    list-style: none;   
+    padding: 20px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: stretch;
+    height: 80px;
+    color: black;
+    font-size: 16px;
+    height: 100%;
+    max-height: 100px;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes ul li:hover .btn-cerrar{
+    color: #7a08ec;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes ul li img{
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-top: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes li .parrafo{
+    width: 70%;
+    height: 100%;
+    margin-left: 10px;
+    text-align: left;
+}
+.nav-mostrando-mensajes .contenedor-mensajes li  .contenido-mensajes{
+    cursor: text;
+    font-size: 12px;
+    color: #a8aaa6;
+}
+.nav-mostrando-mensajes .contenedor-mensajes li  .parrafo .nombre:hover{
+    color: #7a08ec;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes li  .contenido-mensajes span{
+    display: block;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes li button{
+    cursor: pointer;
+    width: 20%;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    color: #7a08ec;
+    height: 100%;
+    margin-left: 5px;
+    transition: 0.4s all ease;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes li button:hover{
+    transform: scale(1.1);
+}
+.nav-mostrando-mensajes .mostrar-todos-mensajes{
+    background-color: #7a08ec;
+    width: 100%;
+    height: 50px;
+    color: #d3d4d1;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+} 
+
+/*------------------------------------------>
+TRABAJANDO CON VENTANA NOTIFICACIONES
+------------------------------------------->*/
+
+nav .nav-notificaciones .nav-mostrando-notificaciones{
+    background-color: royalblue;
+    position: absolute;
+    width: 350px;
+    top: 60px;
+    right: -100px;
+    border-radius: 8px;
+    z-index: 1500;
+    transition: 1.2s all ease-in-out;
+    display: none;
+}
+
+nav .nav-notificaciones .nav-mostrando-notificaciones.activo{
+    display: inline-block;
+}
+
+nav .nav-notificaciones .nav-mostrando-notificaciones::before{
+    content: "";
+    display: block;
+    background-color: transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    position: absolute;
+    top: -5px;
+    left: 215px;
+}
+
+.nav-mostrando-notificaciones .titulo{
+    font-size: 8px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    color: #a8aaa6;
+    border-bottom: 1px solid #d9dbd7;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.nav-mostrando-notificaciones .titulo span:hover{
+    color: orangered;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones{
+    width: 100%;
+    background-color: violet;
+    max-height: 400px;
+    overflow: auto;
+}
+.nav-mostrando-notificaciones .contenedor-notificaciones ul{
+    width: 100%;
+    background-color: white;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1),
+    -3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-mostrando-notificaciones .contenedor-notificaciones ul li{
+    width: 100%;
+    list-style: none;   
+    padding: 20px;
+    border-bottom: 1px solid #dadada;
+    display: flex;
+    justify-content: stretch;
+    height: 80px;
+    color: black;
+    font-size: 16px;
+    height: 100%;
+    max-height: 100px;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones ul li:hover .btn-cerrar{
+    color: orange;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones ul li img{
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 0px;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones li .parrafo{
+    width: 70%;
+    height: 100%;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones li  .parrafo .nombre:hover{
+    color: orangered;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones .parrafo span{
+    display:block;
+    color: #a8aaa6;
+    font-size: 12px;
+    cursor: text;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones .parrafo .contenido{
+    color: #a8aaa6;
+    font-size: 12px;
+    margin-top: 8px;
+    cursor: text;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones li button{
+    cursor: pointer;
+    width: 20%;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+    color: orangered;
+    height: 100%;
+    margin-left: 5px;
+    transition: 0.4s all ease;
+    outline: none;
+}
+
+.nav-mostrando-notificaciones .contenedor-notificaciones li button:hover{
+    transform: scale(1.1);
+}
+
+.nav-mostrando-notificaciones .mostrar-todas-notificaciones{
+    background-color: orangered;
+    width: 100%;
+    height: 50px;
+    color: #d3d4d1;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+} 
+.nav-mostrando-notificaciones .contenedor-notificaciones .btn-cerrar{
+    color: white;
+    transition: .5s all ease-in-out;
+    background-color: transparent;
+}
+
+.nav-mostrando-solicitudes .contenedor-solicitudes .btn-cerrar{
+    color: white;
+    transition: .5s all ease-in-out;
+    background-color: transparent;
+}
+
+.nav-mostrando-mensajes .contenedor-mensajes .btn-cerrar{
+    color: white;
+    transition: .5s all ease-in-out;
+    background-color: transparent;
+}
+

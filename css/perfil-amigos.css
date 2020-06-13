@@ -1,0 +1,488 @@
+.main{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.main .contenedor-busqueda{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.contenedor-busqueda p{
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.contenedor-busqueda .barra-busqueda{
+    padding: 20px;
+}
+
+.barra-busqueda input{
+    padding: 15px;
+    width: 250px;
+    border-radius: 8px;
+    border: 1px solid #a8aaa6;
+    outline: none;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.barra-busqueda i{
+    cursor: pointer;
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px;
+    transition: .3s all ease-out;
+    color: #a8aaa6;
+}
+
+.barra-busqueda input + i{
+    font-size: 20px;
+    display: inline-block;
+    padding: 20px;
+    transition: .3s all ease-out;
+}
+
+.barra-busqueda input + i:hover{
+    color: black;
+}
+
+
+.main .grid{
+    margin-top: 20px;
+    width: 100%;
+    /*Para que los items se posiciones con respecto a la grid*/
+    position: relative;
+}
+
+.grid .item{
+    position: absolute;
+    display: block;
+	padding: 0;
+	margin: 5px;
+	width: calc(25% - 10px);
+}
+
+.foto-amistades .mini-perfil-amigo{
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    min-height: 440px;
+    max-height: 440px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+
+
+.mini-perfil-amigo .portada-amigo{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-1.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+
+.mini-perfil-amigo .portada-amigo.dos{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-2.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+.mini-perfil-amigo .portada-amigo.tres{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-3.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+.mini-perfil-amigo .portada-amigo.cuatro{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-4.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+.mini-perfil-amigo .portada-amigo.cinco{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-5.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+.mini-perfil-amigo .portada-amigo.seis{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-6.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+.mini-perfil-amigo .portada-amigo.siete{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-7.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+.mini-perfil-amigo .portada-amigo.ocho{
+    width: 100%;
+    height: 80px;
+    background-image: url("../imagenes/amigo-portada-8.jpg");
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 100% 100px;
+}
+
+.mini-perfil-amigo .avatar-amigo{
+    width: 100%;
+}
+
+.avatar-amigo .mas-opciones{
+    width: 100%;
+    text-align: right;
+    padding: 10px 10px;
+    position: relative;
+}
+.mas-opciones i {
+    cursor: pointer;
+    color: #a8aaa6;
+}
+
+.mas-opciones .ventana-opciones{
+    position: absolute;
+    width: 150px;
+    background-color: rgb(118, 10, 241);
+    z-index: 800;
+    right: 5px;
+    text-align: left;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    display: none;
+    transition: .3s all ease-in;
+}
+
+.ventana-opciones.activo{
+    display: inline-block;
+}
+
+.ventana-opciones div{
+    transition: .3s all ease-out;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.ventana-opciones div:hover{
+    color: orangered;
+}
+
+.avatar-amigo .nombre-amigo{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    position: relative;
+    color: black;
+}
+
+.nombre-amigo img{
+    position: absolute;
+    top: -90px;
+    border-radius: 50%;
+    border: 2px solid white;
+    left: calc((100% - 92px)/2);
+}
+
+.nombre-amigo p{
+    padding: 10px;
+}
+
+
+.nombre-amigo span{
+    display: block;
+    font-size: 14px;
+    color: #a8aaa6;
+    margin-top: 5px;
+}
+
+
+.mini-perfil-amigo .contenedor-deslizable{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    max-height: 165px;
+    min-height: 165px;
+}
+
+/*CONTENEDOR1 EN SU ESTADO INICIAL*/
+.mini-perfil-amigo .contenedor-deslizable .contenedor-1{
+    width: 100%;
+    transition: .4s all ease;
+    display: inline-block;
+    max-height: 160px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/*CONTENEDOR1 DESLIZADO HACIA LA IZQUIERDA*/
+.mini-perfil-amigo .contenedor-deslizable .contenedor-1.deslizar{
+    transform: translateX(-100%);
+    transition: .4s all ease;
+}
+
+.contenedor-1 .amigos-fotos-videos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    color: black;
+}
+
+.amigos-fotos-videos div{
+    text-align: center;
+    margin: 0px 8px;
+}
+
+.amigos-fotos-videos p span{
+    display: block;
+    font-size: 12px;
+    color: #a8aaa6;
+}
+
+.contenedor-1 .botones{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.botones button{
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    margin: 0px 5px;
+    color: white;
+    cursor: pointer;
+    transition: .3s all ease-in;
+}
+
+.botones button:hover{
+    transform: scale(1.05);
+}
+
+.botones .boton-agregar{
+    background-color: blueviolet;
+}
+
+.botones .boton-mensaje{
+    background-color: skyblue;
+}
+
+
+.mini-perfil-amigo footer{
+    width: 100%;
+    text-align: center;
+}
+
+.mini-perfil-amigo footer .botones-deslizar{
+    width: 100%;
+    padding: 20px;
+}
+
+.mini-perfil-amigo footer .botones-deslizar button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    outline: none;
+    border: 1px solid #a8aaa6;
+    cursor: pointer;
+}
+
+.mini-perfil-amigo footer .botones-deslizar .boton-izq{
+    background-color: orangered;
+}
+
+/*CONTENEDOR2 DESPLAZADO HACIA LA IZQUIERDA TOMANDO EL LUGAR DEL CONTENEDOR2*/
+.mini-perfil-amigo .contenedor-deslizable .contenedor-2{
+    width: 100%;
+    transition: .4s all ease;
+    max-height: 160px;
+    overflow: hidden;
+}
+
+/*CONTENEDOR2 INICIAL HACIA LA DERECHA*/
+.mini-perfil-amigo .contenedor-deslizable .contenedor-2.deslizar{
+    transform: translateX(100%);
+    transition: .4s all ease;
+    display: none;
+}
+
+.contenedor-2 .descripcion-amigo{
+    width: 100%;
+    font-size: 12px;
+    color: black;
+    text-align: left;
+    padding: 10px 20px;
+    line-height: 20px;
+}
+
+.contenedor-2 .amigos-desde{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #a8aaa6;
+    margin-top: 20px;
+}
+
+.amigos-desde span{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    margin-top: 5px;
+}
+
+.no-encontrado{
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    margin: 20px auto;
+    text-align: center;
+    border: 100px;
+    border: 1px solid black;
+    opacity: 0;
+    display: none;
+}
+
+.no-encontrado button{
+    border: none;
+    background-color: red;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+    font-size: 30px;
+}
+
+.no-encontrado p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-encontrado.activo{
+    animation: aparecerError .5s linear forwards;
+    display: block;
+}
+
+@keyframes aparecerError{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/*------------------------------------------------------>
+    RESPONSIVE PERFIL-AMIGOS
+------------------------------------------------------->*/
+
+@media screen and (max-width:1000px){
+    .main{
+        width: 75%;
+    }
+    .main .grid .item{
+        width: calc(50% - 10px);
+    }
+}
+@media screen and (max-width:850px){
+    .main{
+        width: 90%;
+    }
+}
+/*
+MEDIA QUERIE PARA LA SECCION DE AMIGOS
+*/
+
+
+
+/*
+MODO OSCURO
+*/
+
+:root{
+    --fondo-body-oscuro : #151e30;
+    --fondo-nav : black;
+    --fondo-menu-laterales: black;
+    --fondo-titulos: #444444;
+}
+
+
+body.dark .foto-amistades .mini-perfil-amigo{
+    background-color: var(--fondo-menu-laterales);
+}
+
+body.dark .avatar-amigo .nombre-amigo,
+body.dark .contenedor-2 .descripcion-amigo,
+body.dark .contenedor-2 .amigos-desde,
+body.dark .amigos-desde span,
+body.dark .amigos-fotos-videos{
+    color: white;
+}
+
+body.dark .contenedor-busqueda{
+    background-color: black;
+    color: white;
+}
+
+body.dark .barra-busqueda{
+    background-color: black;
+    color: white;
+}
+
+body.dark .barra-busqueda input{
+   background-color: black;
+   color: white;
+}
+
+body.dark .no-encontrado{
+
+    background-color: black;
+    color: white;
+    text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+    border: 1px solid #151e30;
+}

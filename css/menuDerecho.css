@@ -1,0 +1,408 @@
+.menu-derecho{
+    float: right;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    position: fixed;
+    top: 70px;
+    right: 0px;
+    z-index: 1000;
+    transform: translateX(75%);
+    transition: .2s all ease;
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-derecho.retraer{
+    transform: translateX(100%);
+}
+
+.menu-derecho.expandido{
+    transform: translateX(0%);
+}
+
+.menu-derecho .titulo-amigos{
+    font-size: 8px;
+    width: 100%;
+    background-color: white;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    color: #a8aaa6;
+    border-bottom: 1px solid #d9dbd7;
+}
+
+.menu-derecho .settings{
+    cursor: pointer;
+}
+
+.menu-derecho .settings:hover{
+    color: orangered;
+}
+
+.menu-derecho .titulo-amigos.expandido{
+    display: flex;
+}
+.menu-derecho .titulo-familia.expandido{
+    display: flex;
+}
+
+.menu-derecho .lista-total{
+    max-height: 430px;
+    /*---------------------------------------------------OJO*/
+    overflow: hidden;
+    background-color: white;
+}
+
+.menu-derecho .lista-amigos,
+.menu-derecho .lista-familia{
+    width: 100%;
+}
+
+.menu-derecho .lista-amigos ul,
+.menu-derecho .lista-familia ul{
+    width: 100%;
+}
+
+.menu-derecho .lista-amigos ul li,
+.menu-derecho .lista-familia ul li{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+    height: 60px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px;
+    position: relative;
+    transition: .3s all ease;
+}
+
+.menu-derecho .lista-amigos ul li:hover,
+.menu-derecho .lista-familia ul li:hover{
+    background-color: #d8dad6;
+}
+
+.menu-derecho .lista-amigos .estado,
+.menu-derecho .lista-familia .estado{
+    position: absolute;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    background-color: rgb(6, 109, 245);
+    border: none;
+    color: white;
+    left: 5px;
+    top: 10px;
+}
+
+.menu-derecho .lista-amigos .estado.no,
+.menu-derecho .lista-familia .estado.no{
+    position: absolute;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    background-color: red;
+    border: none;
+    color: white;
+    left: 5px;
+    top: 10px;
+}
+
+.menu-derecho .lista-amigos li img,
+.menu-derecho .lista-familia li img{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.menu-derecho .lista-amigos li p,
+.menu-derecho .lista-familia li p{
+    width: 70%;
+    justify-content: left;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menu-derecho .lista-amigos li p:hover,
+.menu-derecho .lista-familia li p:hover{
+    color: orangered;
+}
+
+.menu-derecho .lista-amigos li  span,
+.menu-derecho .lista-familia li span{
+    cursor: text;
+    font-size: 10px;
+    font-weight: normal;
+    display: block;
+    color: #a8aaa6;
+}
+
+.menu-derecho .lista-amigos li button,
+.menu-derecho .lista-familia li button{
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    color: #a8aaa6;
+    background-color: transparent;
+}
+
+.menu-derecho .lista-amigos li button:hover,
+.menu-derecho .lista-familia li button:hover{
+    color: orangered;
+}
+
+.menu-derecho .lista-total .titulo-familia{
+    border-bottom: 1px solid #a8aaa6;
+    border-top: 1px solid #a8aaa6;
+}
+
+.menu-derecho .buscar-amigos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10%;
+    width: 100%;
+    color: #a8aaa6;
+    border-top: 1px solid #a8aaa6;
+    box-shadow: 2px -2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.menu-derecho .buscar-amigos .boton-barra{
+    font-size: 25px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #a8aaa6;
+    cursor: pointer;
+    transition: .3s all ease-in;
+    display: none;
+}
+.menu-derecho .buscar-amigos .boton-barra:hover{
+    color: rgb(127, 6, 241);
+}
+
+.menu-derecho .buscar-amigos.retraer .boton-barra{
+    display: inline-block;
+}
+
+.menu-derecho .buscar-amigos input{
+    border-radius: 8px;
+    border: 1px solid #a8aaa6;
+    width: 60%;
+    padding: 10px;
+    outline: none;
+}
+
+.menu-derecho .buscar-amigos input:hover{
+    border: 1px solid #f1c604;
+}
+
+.menu-derecho .buscar-amigos button{
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #a8aaa6;
+    cursor: pointer;
+}
+
+.menu-derecho .buscar-amigos button:hover{
+    color: orangered;
+}
+
+.menu-derecho .pie-menu-derecho{
+    width: 100%;
+    height: 10%;
+    background-color: royalblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-derecho .pie-menu-derecho button{
+    font-size: 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: .2s all ease-in-out;
+}
+
+.menu-derecho .pie-menu-derecho button:hover{
+    color: #09ffd6;
+}
+
+.menu-derecho .pie-menu-derecho.retraer{
+    position: relative;
+    height: 100px;
+}
+
+.menu-derecho .pie-menu-derecho.retraer p{
+    display: none;
+}
+
+.menu-derecho .pie-menu-derecho.retraer button{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    left: 15px;
+}
+
+.menu-derecho .ventana-emergente-menu{
+    position: relative;
+}
+
+.menu-derecho .ventana-emergente-menu .ventana-emergente-mensaje{
+    position: absolute;
+    top: -70px;
+    right: 185px;
+    width: 300px;
+    background-color: white;
+    z-index: 5000;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: .2s all ease;
+    transform: translateY(-100%);
+}
+
+.menu-derecho .ventana-emergente-menu .ventana-emergente-mensaje.activo{
+    transform:translateY(0px);
+}
+
+.menu-derecho.expandido .ventana-emergente-menu .ventana-emergente-mensaje.activo{
+    right: 0px;
+    transform:translateY(0px);
+}
+
+.menu-derecho .ventana-emergente-mensaje .titulo{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(130, 91, 192);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 5000;
+}
+
+.menu-derecho .ventana-emergente-mensaje .titulo .estado-chat{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    color: white;
+    
+}
+.menu-derecho .ventana-emergente-mensaje .titulo .estado-chat button{
+    width: 8px;
+    height: 8px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    background-color: rgb(84, 207, 36);
+    margin-right: 10px;
+}
+
+.menu-derecho .ventana-emergente-mensaje .titulo .botones{
+    color: white;
+    height: 100%;
+}
+.menu-derecho .ventana-emergente-mensaje .titulo .botones button{
+    font-size: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    height: 100%;
+    width: 20px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
+}
+
+.menu-derecho .ventana-emergente-mensaje .titulo .botones button:hover{
+    color: rgb(72, 27, 177);
+}
+.menu-derecho .ventana-emergente-mensaje .contenido{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+    padding: 0px 20px;
+}
+
+.menu-derecho .ventana-emergente-mensaje .contenido img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+
+.menu-derecho .ventana-emergente-mensaje .mensaje p{
+    font-size: 14px;
+    margin: 10px;
+    padding: 10px;
+    background-color: chartreuse;
+    border-radius: 8px;
+    background-color: rgb(200, 198, 198);
+    color: #525252;
+}
+
+.menu-derecho .ventana-emergente-mensaje .mensaje span{
+    display: block;
+    text-align: right;
+    font-size: 12px;
+    color: #525252;
+}
+
+.menu-derecho .ventana-emergente-menu .pie-chat{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border: 1px solid #a8aaa6;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.menu-derecho .ventana-emergente-menu .pie-chat input{
+    height: 100%;
+    width: 70%;
+    border: none;
+    border-bottom-left-radius: 8px;
+
+}
+
+.menu-derecho .ventana-emergente-menu .pie-chat button{
+    cursor: pointer;
+    height: 100%;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 15%;
+    background-color: transparent;
+    color: #a8aaa6;
+    transition: .2s all ease-in-out;
+}
+
+.menu-derecho .ventana-emergente-menu .pie-chat button:hover{
+    color: #767776;
+}

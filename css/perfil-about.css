@@ -1,0 +1,278 @@
+/*--------------------------------------------------------->
+TRABAJANDO CON PÁGINA ABOUT
+----------------------------------------------------------->*/
+
+.main{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.main .informacion-personal{
+    width: 30%;
+    border-radius: 8px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+
+.informacion-personal .titulo{
+    width: 100%;
+    color: #a8aaa6;
+    font-size: 0.8em;
+    padding: 20px;
+    border-bottom: 1px solid #cfd1ce;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.informacion-personal .contenedor-informacion{
+    width: 100%;
+}
+
+.contenedor-informacion .contenedor-subtitulo-descripcion{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor-subtitulo-descripcion .subtitulo{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contenedor-subtitulo-descripcion .descripcion{
+    font-size: 12px;
+    color: #a8aaa6;
+    padding: 5px;
+    width: 50%;
+}
+
+.informacion-personal .mis-redes-sociales p{
+    width: 100%;
+    padding: 10px;
+}
+
+.mis-redes-sociales .botones-redes-sociales{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.botones-redes-sociales button{
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+.mis-redes-sociales .botones-redes-sociales button i{
+    margin-right: 10px;
+}
+
+.mis-redes-sociales .botones-redes-sociales .boton-f{
+    background-color: #0989ff;
+}
+
+.mis-redes-sociales .botones-redes-sociales .boton-t{
+    background-color: skyblue;
+}
+.mis-redes-sociales .botones-redes-sociales .boton-r{
+    background-color: orangered;
+}
+
+.main .columna2{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.columna2 .intereses{
+    width: 100%;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.intereses .titulo{
+    width: 100%;
+    color: #a8aaa6;
+    font-size: 0.8em;
+    padding: 20px;
+    border-bottom: 1px solid #cfd1ce;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intereses .contenedor-intereses{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-intereses .columna1-intereses,
+.contenedor-intereses .columna2-intereses{
+    width: 50%;
+    padding: 20px;
+    list-style: none;
+}
+
+.columna1-intereses ul,
+.columna2-intereses ul{
+    width: 100%;
+}
+.columna1-intereses ul li,
+.columna2-intereses ul li{
+    width: 100%;
+    list-style: none;
+    padding: 15px;
+}
+
+.columna1-intereses li p,
+.columna2-intereses li p{
+    width: 100%;
+    font-size: 14px;
+    color: #a8aaa6;
+}
+
+.columna1-intereses p span,
+.columna2-intereses p span{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #848583;
+}
+
+.columna2 .educacion{
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+
+.educacion .titulo{
+    width: 100%;
+    color: #a8aaa6;
+    font-size: 0.8em;
+    padding: 20px;
+    border-bottom: 1px solid #cfd1ce;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.educacion .contenedor-educacion{
+    width: 100%;
+}
+
+.contenedor-educacion ul{
+    width: 100%;
+}
+.contenedor-educacion ul li{
+    width: 100%;
+    padding: 20px;
+    list-style: none;
+}
+
+.contenedor-educacion li p{
+    width: 100%;
+    font-size: 14px;
+    color: #a8aaa6;
+}
+
+.contenedor-educacion p span{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #848583;
+}
+
+@media screen and (max-width : 1000px){
+    .main{
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .main .informacion-personal{
+        width: 100%;
+    }
+    .main .columna2{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 850px){
+    .main{
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .main .informacion-personal{
+        width: 100%;
+    }
+    .main .columna2{
+        width: 100%;
+    }
+}
+
+/*
+
+TEMA OSCURO
+*/
+
+:root{
+    --fondo-body-oscuro : #151e30;
+    --fondo-nav : black;
+    --fondo-menu-laterales: black;
+    --fondo-titulos: #444444;
+}
+
+
+body.dark .informacion-personal{
+    background-color: var(--fondo-menu-laterales);
+}
+
+body.dark .intereses,
+body.dark .educacion{
+    background-color: var(--fondo-menu-laterales);
+}
+
+body.dark .intereses .titulo,
+body.dark .educacion .titulo,
+body.dark .informacion-personal .titulo{
+    background-color: var(--fondo-titulos);
+}
+
+body.dark .informacion-personal .contenedor-subtitulo-descripcion .subtitulo{
+    color: #5564eb;
+}
+
+body.dark .informacion-personal .contenedor-subtitulo-descripcion .descripcion{
+    color: white;
+}
+
+body.dark .intereses .contenedor-intereses p,
+body.dark .educacion .contenedor-educacion p,
+body.dark .informacion-personal .mis-redes-sociales{
+    color: white;
+}
+
+body.dark .intereses .contenedor-intereses p span,
+body.dark .educacion .contenedor-educacion p span{
+    color: #ff4800;
+}

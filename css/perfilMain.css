@@ -1,0 +1,449 @@
+/*
+--------------------------------------->
+TRABAJANDO CON LA PORTADA
+-------------------------------------->
+*/
+.contenedor-portada{
+    width: 80%;
+    margin: 100px auto 20px auto;
+}
+
+.portada{
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.portada .foto-portada{
+    width: 100%;
+    height: 300px;
+    background-image: url("../imagenes/gif2.gif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+}
+
+.portada .botones-portada{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.botones-portada .primera-fila{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.botones-portada .segunda-fila{
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botones-portada .foto-perfil{
+    position: relative;
+    width: 30%;
+
+    text-align: center;
+}
+
+.foto-perfil img{
+    position: absolute;
+    top: -110px;
+    right: calc((100% - 120px)/2);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+ .tres-botones{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    right: 0px;
+    top: -40px;
+}
+
+
+.botones-portada .primera-fila .opcion,
+.botones-portada .segunda-fila .opcion{
+    color: #a8aaa6;
+    padding: 30px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.botones-portada .primera-fila .opcion:hover,
+.botones-portada .segunda-fila .opcion:hover{
+    color: black;
+}
+
+.botones-portada .foto-perfil p{
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.botones-portada .foto-perfil p span{
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    color: #a8aaa6;
+}
+
+.tres-botones button{
+    outline: none;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.tres-botones button:hover{
+    transform: scale(1.1);
+    border: 2px solid white;
+}
+
+
+.tres-botones .boton-1{
+    background-color: rgba(36, 181, 238,0.9);
+}
+
+.tres-botones .boton-2{
+    background-color: rgb(106, 6, 236, 0.9);
+}
+
+.tres-botones .boton-3{
+    background-color: rgb(255, 102, 0,0.9);
+}
+
+a{
+    text-decoration: none;
+    color: #a8aaa6;
+    padding: 5px;
+    border-radius: 2px;
+    transition: .3s all ease;
+}
+a:hover{
+    color: black;
+    border: 1px solid black;
+}
+/*------------------------------------------------------>
+    TRABAJANDO CON LA VENTANA main
+-------------------------------------------------------->*/
+
+@media screen and (max-width: 1000px) {
+
+    .main{
+        width: 75%;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "region1 region1" "region2 region3";
+        grid-template-rows: auto auto;
+    }
+
+    .main .columna1{
+        grid-area: region2;
+    }
+    
+    .main .columna2{
+        grid-area: region1;
+    }
+    
+    .main .columna3{
+        grid-area: region3;
+    }
+
+    /*Cuando sea menor a 1000*/
+    .contenedor-portada{
+        width: 75%;
+    }
+
+    .botones-portada .foto-perfil p{
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .botones-portada .foto-perfil p span{
+        font-size: 12px;
+    }
+
+    .botones-portada .primera-fila .opcion{
+        font-size: 0.8em;
+        padding: 20px;
+    }
+
+    .botones-portada .segunda-fila .opcion{
+        font-size: 0.8em;
+        padding: 20px;
+    }
+}
+
+/*Otro media querie en el cual
+cambiaremos la forma de la portada*/
+
+@media screen and (max-width : 850px){
+    .contenedor-portada{
+        width: 90%;
+    }
+
+    .main{
+        width: 90%;
+    }
+
+    .tres-botones{
+        right: calc((100% - 180px)/2);
+    }
+
+    .botones-portada .foto-perfil{
+        position: absolute;
+        top: 230px;
+        left: calc((100% - 300px)/2);
+        width: 300px;
+        text-align: center;
+    }
+    .botones-portada .foto-perfil p{
+        padding: 10px;
+    }
+
+    .portada{
+        background-color: white;
+        height: 520px;
+    }
+
+    .portada .botones-portada{
+        width: 100%;
+        display: block;
+    }
+    .botones-portada .primera-fila {
+        width: 100%;
+        
+    }
+
+    .botones-portada .segunda-fila {
+        width: 100%;
+    }
+
+    .portada .foto-portada{
+        height: 200px;
+    }
+
+    /*----------------------------------->
+    ESCONDIENDO LOS MENÚS LATERALES
+    ------------------------------------->
+    */
+
+    .menu-izquierdo{
+        transform: translateX(-100%);
+    }
+    .menu-izquierdo.expandirCelular{
+        transform: translateX(0%);
+    }
+
+    .menu-derecho{
+        transform: translateX(100%);
+    }
+
+    nav #logo-celular{
+        cursor: pointer;
+        transform: translateX(0%);
+    }
+    /*--------------------------------------->
+        MODIFICANDO EL NAV
+    ----------------------------------------->
+    */
+    nav .nav-parrafo{
+        display: none;
+    }
+
+    nav .contenedor-busqueda{
+        width: 10%;
+        margin-left: 10px;
+        text-align: center;
+        padding-left: 20px;
+        background-color: transparent;
+    }
+
+    nav .contenedor-busqueda #barra-busqueda{
+        display: none;
+    }
+
+    nav .contenedor-busqueda + p{
+        display: none;
+    }
+
+    nav .contenedor-nav-fotoPerfil{
+        display: none;
+    }
+
+    nav #logo-menu-nav{
+        display: inline-block;
+    }
+}
+
+
+/*MODO OSCURO*/
+
+
+
+.contenedor-boton-oscuro{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 5px;
+    overflow: hidden;
+}
+.contenedor-boton-oscuro .desplegar-boton-oscuro{
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    border: none;
+    outline:none;
+    width: 20%;
+    cursor: pointer;
+    transition: .3s all ease;
+}
+
+.boton-oscuro{
+    width: 60%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    height: 40px;
+    position: relative;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    transition: .3s all ease;
+    transform: translateY(-150%);
+    opacity: 0;
+    color: black;
+}
+
+.boton-oscuro span{
+    display: block;
+    background-color: transparent;
+    height: 100%;
+    line-height: 40px;
+    width: 30px;
+    font-size: 25px;
+}
+
+.boton-oscuro::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: #a8aaa6;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    top: -5;
+    right:  unset;
+    left:  0;
+    transition: .3s all ease;
+}
+
+.desplegar-boton-oscuro:hover{
+    transform: scale(1.1);
+    color: #a8aaa6;
+}
+
+.desplegar-boton-oscuro.rotar{
+    transform: rotate(180deg);
+}
+
+.desplegar-boton-oscuro.normal{
+    transform: rotate(0deg);
+}
+
+.boton-oscuro.normal{
+    animation: normalBotonOscuro .8s forwards;
+}
+
+@keyframes normalBotonOscuro{
+    from{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    to{
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+}
+
+.boton-oscuro.desplegar{
+    animation: animacionBtnOscuro .8s forwards;
+}
+
+@keyframes animacionBtnOscuro{
+    from{
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.boton-oscuro.activo::after{
+    right: 0;
+    left: unset;
+}
+
+.boton-oscuro.activo{
+    background-color: rgb(15, 252, 86);
+    color: white;
+}
+
+:root{
+    --fondo-body-oscuro : #151e30;
+    --fondo-nav : #0f121c;
+    --fondo-menu-laterales : #0f121c;
+}
+
+body.dark{
+    background-color: var(--fondo-body-oscuro);
+}
+
+body.dark nav{
+    background-color: var(--fondo-nav);
+}
+
+body.dark #lista-menu-izquierdo .item-menu-izquierdo,
+body.dark .menu-derecho .lista-total{
+    background-color: var(--fondo-menu-laterales);
+}
+
+body.dark .nombre-item{
+    background-color: var(--fondo-menu-laterales);
+}
+
+body.dark .contenedor-portada .portada{
+    background-color: var(--fondo-menu-laterales);
+}
+
+body.dark .contenedor-portada .botones-portada .foto-perfil p{
+    color: white;
+}

@@ -1,0 +1,358 @@
+.main{
+    width: 100%;
+    margin: 80px auto;
+    font-family: 'Viaoda Libre', cursive;
+}
+
+.contenedor-principal{
+    width: 85%;
+    padding: 10px;
+    margin: auto;
+    height: 580px;
+    /*TEMPORAL*/
+    position: relative;
+}
+
+.contenedor-principal .contenedor-reproductor{
+    width: 75%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 80px;
+    background-color: black;
+}
+
+/*
+*TEMPORAL 
+*/
+
+.contenedor-reproductor .barra-navegacion-reproductor{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-navegacion-reproductor button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.barra-navegacion-reproductor form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.barra-navegacion-reproductor form input{
+    font-size: 15px;
+    color: black;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.barra-navegacion-reproductor div{
+    cursor: pointer;
+}
+
+.barra-navegacion-reproductor .contenedor-opciones{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 38, 255, 0.4);
+    border-radius: 20px;
+    height: 100%;
+    padding: 10px;
+    color: white;
+}
+
+.barra-navegacion-reproductor .contenedor-opciones div{
+    cursor: pointer;
+    margin: 0px 5px;
+}
+
+.barra-navegacion-reproductor .contenedor-opciones div:hover{
+    color: rgb(0, 0, 0);
+
+}
+
+.contenedor-grid-canciones{
+    width: 100%;
+    height: calc(100% - 40px);
+    background: linear-gradient(120deg, rgb(166, 255, 0), rgb(56, 56, 201), violet);
+    background-size: 300% 400%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 10px;
+    animation: cambiarFondo 4s linear infinite;
+}
+
+.contenedor-grid-canciones::-webkit-scrollbar{
+    width: 10px;
+    background-color: gray;
+}
+
+.contenedor-grid-canciones::-webkit-scrollbar-thumb{
+    background-color: rgb(219, 219, 219);
+    border-radius: 8px;
+}
+
+@keyframes cambiarFondo{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 50% 0%;
+    }
+}
+
+.contenedor-grid-canciones .grid-canciones-favoritas,
+.contenedor-grid-canciones .grid-generos{
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0px 4px;
+}
+
+ .item{
+    position: absolute;
+    display: block;
+    width: calc(20% - 10px);
+    height: 240px;
+    margin: 5px;
+}
+
+ .contenedor-cancion{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.contenedor-cancion:hover{
+    background-color: rgba(255,255,255,.3);
+}
+
+.contenedor-cancion.activo{
+    background-color: rgba(255,255,255,.4);
+}
+
+ .contenedor-cancion img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+ .contenedor-cancion .descripcion{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}
+ .contenedor-cancion .autor{
+    width: 100%;
+    margin-top: 10px;
+    color: rgb(207, 207, 207);
+    font-size: 12px;
+    text-align: center;
+}
+/*
+.menu-izquierdo{
+    transform: translateX(-100%);
+}
+.menu-izquierdo.expandirCelular{
+    transform: translateX(0%);
+}
+
+
+.menu-derecho{
+    transform: translateX(100%);
+}
+
+nav #logo-celular{
+    cursor: pointer;
+    transform: translateX(0%);
+}
+*/
+/*
+TRABAJANDO CON EL REPRODUCTOR
+*/
+
+.contenedor-reproductor .reproductor{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: rgba(0,0,0,.8);
+    z-index: 20;
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reproductor .contenedor-imagen-reproduciendo{
+    width: 80px;
+    height: 100%;
+    text-align: center;
+}
+
+.contenedor-imagen-reproduciendo img{
+    width: 100%;
+    height: 100%;
+}
+
+.reproductor .controles-principales{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controles-principales button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.controles-principales button:hover{
+    color: rgb(136, 136, 136);
+    transform: scale(1.2);
+}
+
+.contenedor-tiempo-progreso{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-tiempo-progreso p{
+    text-align: center;
+    color: white;
+    margin: 5px;
+    font-size: 14px;
+}
+.contenedor-tiempo-progreso .contenedor-barra-progreso{
+    width: 90%;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.contenedor-barra-progreso .barra-progreso{
+    height: 100%;
+    width: 0px;
+    background-color: rgba(255,255,255);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.reproductor .botones-adicionales{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botones-adicionales #btn-volumen{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botones-adicionales .contenedor-volumen{
+    width: 100px;
+    height: 20px;
+    background-color: rgba(255,255,255,.3);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.contenedor-volumen .volumen{
+    height: 100%;
+    max-width: 100px;
+    background-color: rgba(255,255,255);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.mas-botones{
+    width: 20%;
+    height: 100%;
+}
+
+.mas-botones button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+body.dark .contenedor-reproductor .barra-navegacion-reproductor{
+    background-color: black;
+    color: white;
+}
+
+body.dark .barra-navegacion-reproductor form input{
+    color: white;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    margin-left: 5px;
+    background-color: transparent;
+    text-align: center;
+
+}
+
+body.dark .barra-navegacion-reproductor button{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+body.dark .barra-navegacion-reproductor .contenedor-opciones div:hover{
+    font-weight: bold;
+    color: white;
+}
+
+
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+}
